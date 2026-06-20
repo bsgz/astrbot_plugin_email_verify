@@ -1,6 +1,6 @@
 name: astrbot_plugin_qq_email_verify
 display_name: QQ群邮箱验证码验证
-author: your_name
+author: 拨丝拐枣
 version: 1.0.0
 short_desc: 新成员入群后通过QQ邮箱验证码完成验证。
 description: |
