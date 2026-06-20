@@ -1,0 +1,15 @@
+name: astrbot_plugin_qq_email_verify
+display_name: QQ群邮箱验证码验证
+author: your_name
+version: 1.0.0
+short_desc: 新成员入群后通过QQ邮箱验证码完成验证。
+description: |
+  基于QQ邮箱验证码的入群验证插件。
+  核心功能：
+  1. 新成员入群后自动发送验证码邮件到其QQ邮箱；
+  2. 群内发送提醒，要求新成员在群内回复验证码；
+  3. 超时未验证自动踢出，支持答错重试上限；
+  4. 完全可自定义消息模板和时间参数。
+repo_url: ""
+support_platforms:
+  - aiocqhttp

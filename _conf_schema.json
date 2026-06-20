@@ -1,0 +1,100 @@
+{
+  "smtp_host": {
+    "description": "SMTP 服务器地址",
+    "type": "string",
+    "default": "smtp.qq.com",
+    "hint": "QQ邮箱默认 smtp.qq.com。163邮箱用 smtp.163.com，Gmail用 smtp.gmail.com 等。"
+  },
+  "smtp_port": {
+    "description": "SMTP 端口",
+    "type": "int",
+    "default": 465,
+    "hint": "QQ邮箱 SSL 端口为 465，STARTTLS 端口为 587。"
+  },
+  "smtp_user": {
+    "description": "发件邮箱地址",
+    "type": "string",
+    "default": "",
+    "hint": "你的邮箱地址，例如 123456@qq.com",
+    "obvious_hint": true
+  },
+  "smtp_password": {
+    "description": "邮箱授权码",
+    "type": "string",
+    "default": "",
+    "hint": "QQ邮箱需在「设置 → 账户 → POP3/SMTP服务」中开启并获取授权码，不是QQ密码！",
+    "obvious_hint": true
+  },
+  "sender_name": {
+    "description": "发件人显示名称",
+    "type": "string",
+    "default": "QQ群验证系统",
+    "hint": "收件人看到的发件人名称。"
+  },
+  "enabled_groups": {
+    "description": "启用验证的群号列表",
+    "type": "list",
+    "default": [],
+    "hint": "填入需要开启邮箱验证的群号。留空则对所有群生效。"
+  },
+  "verification_timeout": {
+    "description": "验证超时时间（秒）",
+    "type": "int",
+    "default": 300,
+    "hint": "新成员必须在此时间内完成验证。默认 300 秒（5 分钟）。"
+  },
+  "kick_countdown_warning_time": {
+    "description": "超时警告提前时间（秒）",
+    "type": "int",
+    "default": 60,
+    "hint": "超时前多少秒发送警告提醒。设为 0 禁用警告。默认 60 秒。"
+  },
+  "kick_delay": {
+    "description": "踢出前延迟（秒）",
+    "type": "int",
+    "default": 5,
+    "hint": "发送超时通知后延迟多久执行踢人。默认 5 秒。"
+  },
+  "max_retries": {
+    "description": "最大答错次数",
+    "type": "int",
+    "default": 3,
+    "hint": "答错超过此次数直接踢出。设为 0 不限制。"
+  },
+  "code_length": {
+    "description": "验证码长度",
+    "type": "int",
+    "default": 6,
+    "hint": "验证码的位数，默认 6 位数字。"
+  },
+  "new_member_prompt": {
+    "description": "入群验证提示语",
+    "type": "text",
+    "default": "{at_user} 欢迎加入本群！\n📬 验证码已发送到你的QQ邮箱（{email}），请查收邮件并在 {timeout} 分钟内直接发送验证码完成验证。",
+    "hint": "可用变量: {at_user}, {member_name}, {email}, {timeout}。"
+  },
+  "wrong_answer_prompt": {
+    "description": "验证码错误提示语",
+    "type": "text",
+    "default": "{at_user} ❌ 验证码错误！请检查邮箱后重新输入。你还剩 {remaining} 次机会。",
+    "hint": "可用变量: {at_user}, {member_name}, {remaining}。"
+  },
+  "countdown_warning_prompt": {
+    "description": "超时警告提示语",
+    "type": "text",
+    "default": "{at_user} ⏰ 验证即将超时！请尽快查看QQ邮箱中的验证码并发送，否则将被移出群聊。",
+    "hint": "可用变量: {at_user}, {member_name}。"
+  },
+  "failure_message": {
+    "description": "超时提示语",
+    "type": "text",
+    "default": "{at_user} ⏱️ 验证超时，你将在 {countdown} 秒后被移出群聊。",
+    "hint": "可用变量: {at_user}, {member_name}, {countdown}。"
+  },
+  "verify_success_message": {
+    "description": "验证成功提示语",
+    "type": "text",
+    "default": "{at_user} ✅ 验证通过，欢迎加入！",
+    "hint": "可用变量: {at_user}, {member_name}。"
+  }
+}
