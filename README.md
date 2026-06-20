@@ -1,0 +1,2 @@
+# astrbot_plugin_email_verify
+使用邮箱验证码的新人进群的AstrBot验证插件
